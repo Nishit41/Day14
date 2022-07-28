@@ -5,7 +5,7 @@ public class LinkedList<T> {
     Node<T> tail;
 
 
-    public void push(T key) {
+    public void push(T key) 
         {
             Node<T> newNode = new Node<>(key);
             if (head == null) {
@@ -16,9 +16,9 @@ public class LinkedList<T> {
                 head = newNode;
             }
         }
-    }
+    
 
-    public void print() {
+    public void print() 
         {
             Node<T> temp = head;
             while (temp != null) {
@@ -27,9 +27,6 @@ public class LinkedList<T> {
             }
         }
 
-        //public boolean pop()
-        //{
-
-        //}
-    }
+       
+    
 }
