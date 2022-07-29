@@ -18,7 +18,7 @@ public class LinkedList<T> {
         }
     }
 
-    public void print() {
+    public void print()
         {
             Node<T> temp = head;
             while (temp != null) {
@@ -26,10 +26,30 @@ public class LinkedList<T> {
                 temp = temp.next;
             }
         }
+        void add(T data)
+        {
+            Node<T> node = new Node<>( data);
+            if(head == null){
+                head = node;
+                tail = node;
+            }
+            else{
+                tail.next = node;
+                tail = node;
+            }
+        }
 
-        //public boolean pop()
-        //{
-
-        //}
-    }
+    void display(){
+        Node<T> temp = head;
+        while (temp != null){
+            System.out.print(temp.data+ " ");
+            temp = temp.next;
+        }
+        }
 }
+
+
+
+
+
+
