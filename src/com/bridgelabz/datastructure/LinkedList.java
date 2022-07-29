@@ -5,6 +5,7 @@ public class LinkedList<T> {
     Node<T> tail;
 
 
+
     public void push(T key) {
         {
             Node<T> newNode = new Node<>(key);
@@ -39,13 +40,20 @@ public class LinkedList<T> {
             }
         }
 
-    void display(){
+    void display() {
         Node<T> temp = head;
-        while (temp != null){
-            System.out.print(temp.data+ " ");
+        while (temp != null) {
+            System.out.print(temp.data + " ");
             temp = temp.next;
         }
-        }
+
+    }
+
+    public void insert(T data) {
+        Node<T> node = new Node<>(data);
+        head.next = node;
+        node.next = tail;
+    }
 }
 
 
