@@ -6,6 +6,7 @@ public class LinkedListMain {
         linkedList.push(70);
         linkedList.push(56);
         linkedList.insert(30);
+        System.out.println(linkedList.pop());
         linkedList.display();
         System.out.println();
         linkedList.display();
