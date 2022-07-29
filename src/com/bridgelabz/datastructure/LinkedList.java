@@ -48,6 +48,15 @@ public class LinkedList<T> {
         }
 
     }
+    public Node<T> search(T searchData) {
+        Node<T> temp = head;
+        while(temp != null){
+            if(temp.data.equals(searchData))
+                return temp;
+            temp = temp.next;
+        }
+        return null;
+    }
 
     public void insert(T data) {
         Node<T> node = new Node<>(data);
@@ -69,6 +78,7 @@ public class LinkedList<T> {
         temp.next = null;
         temp = tail;
         return  deletedElement;
+
 
     }
 }

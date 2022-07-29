@@ -11,7 +11,12 @@ public class LinkedListMain {
         linkedList.display();
         System.out.println();
         linkedList.display();
-
+        if(linkedList.search(30) != null ){
+            System.out.println("Data found");
+        }
+        else{
+            System.out.println("Data not found");
+        }
     }
 }
 
