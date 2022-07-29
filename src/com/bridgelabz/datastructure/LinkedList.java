@@ -58,6 +58,8 @@ public class LinkedList<T> {
         return null;
     }
 
+
+
     public boolean insertAfter(T searchData, T insertData) {
         Node<T> newNode = new Node<>(insertData);
         Node<T> searchedNode = search(searchData);
@@ -68,11 +70,29 @@ public class LinkedList<T> {
         }
         return false;
     }
+    public void popElement(T value){
+        Node<T> searchedNode = search(value);
+        Node<T> temp = head;
+        while(temp.next != searchedNode){
+            temp = temp.next;
+        }
+        temp.next = searchedNode.next;
+
+    }
 
     public void insert(T data) {
         Node<T> node = new Node<>(data);
         head.next = node;
         node.next = tail;
+    }
+    public int size(){
+        int count=0;
+        Node<T> temp = head;
+        while(temp != null){
+            temp = temp.next;
+            count++;
+        }
+        return count;
     }
     public T pop() {
         T deletedElement = head.data;
